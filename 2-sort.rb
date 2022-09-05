@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby 2.7.5p203
+
 ###
 #
 #  Sort integer arguments (ascending) 
