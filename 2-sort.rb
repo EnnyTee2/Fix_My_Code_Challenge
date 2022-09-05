@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby 2.7.5p203
+#!/usr/bin/env ruby
 
 ###
 #
