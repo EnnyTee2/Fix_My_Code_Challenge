@@ -4,8 +4,11 @@ Web server
 """
 from api.v1.views import app_views
 from flask import Flask, jsonify, make_response
+from flask_cors import CORS
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
+cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 app.register_blueprint(app_views)
 
 
@@ -13,12 +16,6 @@ app.register_blueprint(app_views)
 def not_found(error):
     """ json 404 page """
     return make_response(jsonify({"error": "Not found"}), 404)
-
-@app.route('/api/v1/status', methods=['GET'])
-def status():
-    """ get request status """
-    if request.method == 'GET':        
-        return jsonify({"status": "OK"})
 
 
 if __name__ == "__main__":
