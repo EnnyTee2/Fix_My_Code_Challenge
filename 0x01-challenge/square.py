@@ -40,7 +40,7 @@ class Square():
 
     def  perimeter_of_my_square(self):
         """Perimeter of the square"""
-        return 2 * (self.width  + self.height)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """returns the string representation"""
