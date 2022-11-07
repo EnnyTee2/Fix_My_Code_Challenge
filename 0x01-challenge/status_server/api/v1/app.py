@@ -18,7 +18,7 @@ def not_found(error):
 def status():
     """ get request status """
     if request.method == 'GET':        
-        return "Success", 200
+        return jsonify({"status": "OK"})
 
 
 if __name__ == "__main__":
