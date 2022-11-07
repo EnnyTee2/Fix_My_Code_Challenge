@@ -25,14 +25,16 @@ class Square():
         """Width setter"""
         if value < 1:
             raise ValueError("Width must be greater than 0")
-        self.__width = value
+        else:
+            self.__width = value
     
     @height.setter
     def height(self, value):
         """Height setter"""
         if value < 1:
             raise ValueError("Height must be greater than 0")
-        self.__height = value
+        else:
+            self.__height = value
     
     def area_of_my_square(self):
         """ Area of the square """
