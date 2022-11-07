@@ -13,15 +13,15 @@ class Square():
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.width
+        return self.width * self.height
 
     def  perimeter_of_my_square(self):
         """returns the perimeter"""
-        return (self.width * 2) + (self.width * 2)
+        return (self.width * 4)
 
     def __str__(self):
         """returns the string representation"""
-        return "{}/{}".format(self.width, self.width)
+        return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
