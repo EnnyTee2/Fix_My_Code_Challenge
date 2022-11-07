@@ -3,21 +3,44 @@
 """ square class """
 
 class Square():
-    width = 0
-    height = 0
+    """Documentation"""
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width=0, height=0):
         """ init method """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
-
+        self.__width = width
+        self.__height = height
+        
+    @property
+    def width(self):
+        """Width getter"""
+        return self.__width
+    
+    @property
+    def height(self):
+        """Height getter"""
+        return self.__height
+    
+    @width.setter
+    def width(self, value):
+        """Width setter"""
+        if value < 1:
+            raise ValueError("Width must be greater than 0")
+        self.__width = value
+    
+    @height.setter
+    def height(self, value):
+        """Height setter"""
+        if value < 1:
+            raise ValueError("Height must be greater than 0")
+        self.__height = value
+    
     def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.height
 
     def  perimeter_of_my_square(self):
-        """returns the perimeter"""
-        return 2 *(self.width  + self.height)
+        """Perimeter of the square"""
+        return 2 * (self.width  + self.height)
 
     def __str__(self):
         """returns the string representation"""
